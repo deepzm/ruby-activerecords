@@ -1,0 +1,17 @@
+base: &base
+  adapter: postgresql
+  encoding: unicode
+  username: rubytest
+  password: rubytest
+  host: localhost
+  port: 5432
+
+development:
+  <<: *base
+  database: ruby_stuff
+  pool: 5
+
+test:
+  <<: *base
+  database: ruby_stuff_test
+  pool: 5
